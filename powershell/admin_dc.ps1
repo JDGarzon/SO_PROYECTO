@@ -39,7 +39,7 @@
         }
         4 {
             # Opción 4: Desplegar la cantidad de memoria libre y espacio de swap en uso
-            $memory = Get-WmiObject -Class Win32_OperatingSystem
+            $memory = Get-WmiObject -Class Win32_OperatingSystem 
             $totalMemory = $memory.TotalVisibleMemorySize * 1KB
             $freeMemory = $memory.FreePhysicalMemory * 1KB
             $swapUsage = $memory.TotalVirtualMemorySize * 1KB - $memory.FreeVirtualMemory * 1KB
